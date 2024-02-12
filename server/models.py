@@ -1,3 +1,3 @@
 from config import db
 
-print('hello')
+print('hello!')
