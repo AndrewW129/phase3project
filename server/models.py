@@ -24,13 +24,13 @@ class User(db.Model):
     user_name = db.Column(db.String)
     password = db.Column(db.String)
     account_name = db.Column(db.String)
-    account_email = db.Column(db.String, unique = True)
+    email = db.Column(db.String, unique = True)
 
     def __repr__(self):
         return (
             f"User Name: {self.user_name}; Account: {self.account_name} Email: {self.account_email} Password: {self.password}"
         )
-
+        
 class Checkout(db.Model):
     __tablename__ = 'checkouts'
     id = db.Column(db.Integer, primary_key = True)
