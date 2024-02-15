@@ -37,20 +37,22 @@ if __name__ == "__main__":
         author =	'Douglas Adam\'s',
         genre = 'Science Fiction',
         pub_year = 1939,
-        page_count = 392),
+        page_count = 392,
+        available = 2),
       Book(
         title = 'Percy Jackson and the Olympians: Vol 1',
         author = 'Rick Riordan',
         genre = 'Sicence Fiction',
         pub_year = 2007,
-        page_count = 552),
+        page_count = 552,
+        available = 1),
       Book(
         title = 'Percy Jackson and the Olympians: Vol 2',
         author = 'Rick Riordan',
         genre = 'Science Fiction',
         pub_year = 2009,
-        page_count = 673)
-
+        page_count = 673,
+        available = 5)
     ]
     db.session.add_all(new_books)
     db.session.commit()

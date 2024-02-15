@@ -25,7 +25,7 @@ def upgrade():
     sa.Column('genre', sa.String(), nullable=True),
     sa.Column('pub_year', sa.Integer(), nullable=True),
     sa.Column('page_count', sa.Integer(), nullable=True),
-    sa.Column('available', sa.Boolean(), nullable=True),
+    sa.Column('available', sa.Integer(), nullable=True),
     sa.PrimaryKeyConstraint('id', name=op.f('pk_books'))
     )
     op.create_table('users',

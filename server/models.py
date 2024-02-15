@@ -9,7 +9,7 @@ class Book(db.Model):
     genre = db.Column(db.String)
     pub_year = db.Column(db.Integer)
     page_count = db.Column(db.Integer)
-    available = db.Column(db.Boolean)
+    available = db.Column(db.Integer)
 
     def __repr__(self):
         return (
@@ -21,14 +21,14 @@ class User(db.Model):
     __tablename__ = 'users'
 
     id = db.Column(db.Integer, primary_key = True)
-    user_name = db.Column(db.String)
+    user_name = db.Column(db.String, unique = True)
     password = db.Column(db.String)
     account_name = db.Column(db.String)
     email = db.Column(db.String, unique = True)
 
     def __repr__(self):
         return (
-            f"User Name: {self.user_name}; Account: {self.account_name} Email: {self.account_email} Password: {self.password}"
+            f"User Name: {self.user_name}; Account: {self.account_name} Email: {self.email} Password: {self.password}"
         )
         
 class Checkout(db.Model):
